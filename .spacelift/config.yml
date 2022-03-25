@@ -1,0 +1,32 @@
+version: "1"
+
+stack_defaults:
+    before_init:
+        - ./init.sh
+        - ./run_envs.sh before_init
+    after_init:
+        - ./run_envs.sh after_init
+        
+    before_plan:
+        - ./run_envs.sh before_plan
+       
+    after_plan:
+        - ./run_envs.sh after_plan
+       
+    before_apply:
+        - ./run_envs.sh before_apply
+       
+    after_apply:
+        - ./run_envs.sh after_apply
+      
+    before_perform:
+        - ./run_envs.sh before_perform
+       
+    after_perform:
+        - ./run_envs.sh after_perform
+      
+    before_destroy:
+        - ./run_envs.sh before_destroy
+        
+    after_destroy:
+        - ./run_envs.sh after_destroy
