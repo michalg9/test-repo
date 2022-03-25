@@ -7,8 +7,5 @@ stack_defaults:
         - export TEST_PERSIST=persistThis
         - echo "Echoing TEST_OVERWRITE: \$TEST_OVERWRITE"
         - echo "Echoing TEST_PERSIST: \$TEST_PERSIST"
-        - echo "multi" >> test.txt
-        - echo "line" >> test.txt
-        - export MULTILINE=\$(cat test.txt)
-        - echo "Echoing MULTILINE: \$MULTILINE"
+
       
