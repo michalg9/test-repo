@@ -1,0 +1,67 @@
+version: "1"
+
+stack_defaults:
+    before_init:
+    - echo "Running before_init hooks"
+    - export TEST_OVERWRITE=before_init
+    - export TEST_PERSIST=persistThis
+    - echo "Echoing TEST_OVERWRITE: $TEST_OVERWRITE"
+    - echo "Echoing TEST_PERSIST: $TEST_PERSIST"
+    - echo "multi" >> test.txt
+    - echo "line" >> test.txt
+    - export MULTILINE=$(cat test.txt)
+    - echo "Echoing MULTILINE: $MULTILINE"
+    after_init:
+    - echo "Running after_init hooks"
+    - export TEST_OVERWRITE=after_init
+    - echo "Echoing TEST_OVERWRITE: $TEST_OVERWRITE"
+    - echo "Echoing TEST_PERSIST: $TEST_PERSIST"
+    - echo "Echoing MULTILINE: $MULTILINE"
+    before_plan:
+    - echo "Running before_plan hooks"
+    - export TEST_OVERWRITE=before_plan
+    - echo "Echoing TEST_OVERWRITE: $TEST_OVERWRITE"
+    - echo "Echoing TEST_PERSIST: $TEST_PERSIST"
+    - echo "Echoing MULTILINE: $MULTILINE"
+    after_plan:
+    - echo "Running after_plan hooks"
+    - export TEST_OVERWRITE=after_plan
+    - echo "Echoing TEST_OVERWRITE: $TEST_OVERWRITE"
+    - echo "Echoing TEST_PERSIST: $TEST_PERSIST"
+    - echo "Echoing MULTILINE: $MULTILINE"
+    before_apply:
+    - echo "Running before_apply hooks"
+    - export TEST_OVERWRITE=before_apply
+    - echo "Echoing TEST_OVERWRITE: $TEST_OVERWRITE"
+    - echo "Echoing TEST_PERSIST: $TEST_PERSIST"
+    - echo "Echoing MULTILINE: $MULTILINE"
+    after_apply:
+    - echo "Running after_apply hooks"
+    - export TEST_OVERWRITE=after_apply
+    - echo "Echoing TEST_OVERWRITE: $TEST_OVERWRITE"
+    - echo "Echoing TEST_PERSIST: $TEST_PERSIST"
+    - echo "Echoing MULTILINE: $MULTILINE"
+    before_perform:
+    - echo "Running before_perform hooks"
+    - export TEST_OVERWRITE=before_perform
+    - echo "Echoing TEST_OVERWRITE: $TEST_OVERWRITE"
+    - echo "Echoing TEST_PERSIST: $TEST_PERSIST"
+    - echo "Echoing MULTILINE: $MULTILINE"
+    after_perform:
+    - echo "Running after_perform hooks"
+    - export TEST_OVERWRITE=after_perform
+    - echo "Echoing TEST_OVERWRITE: $TEST_OVERWRITE"
+    - echo "Echoing TEST_PERSIST: $TEST_PERSIST"
+    - echo "Echoing MULTILINE: $MULTILINE"
+    before_destroy:
+    - echo "Running before_destroy hooks"
+    - export TEST_OVERWRITE=before_destroy
+    - echo "Echoing TEST_OVERWRITE: $TEST_OVERWRITE"
+    - echo "Echoing TEST_PERSIST: $TEST_PERSIST"
+    - echo "Echoing MULTILINE: $MULTILINE"
+    after_destroy:
+    - echo "Running after_destroy hooks"
+    - export TEST_OVERWRITE=after_destroy
+    - echo "Echoing TEST_OVERWRITE: $TEST_OVERWRITE"
+    - echo "Echoing TEST_PERSIST: $TEST_PERSIST"
+    - echo "Echoing MULTILINE: $MULTILINE"
