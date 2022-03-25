@@ -3,4 +3,6 @@ version: "1"
 stack_defaults:
     before_init:
         - echo "Running before_init hooks"
+        - export TEST_OVERWRITE=before_init
+        - export TEST_PERSIST=persistThis
       
