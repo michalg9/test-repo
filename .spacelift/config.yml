@@ -5,4 +5,6 @@ stack_defaults:
         - echo "Running before_init hooks"
         - export TEST_OVERWRITE=before_init
         - export TEST_PERSIST=persistThis
+        - echo "Echoing TEST_OVERWRITE: $TEST_OVERWRITE"
+        - echo "Echoing TEST_PERSIST: $TEST_PERSIST"
       
