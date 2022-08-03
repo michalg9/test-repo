@@ -11,7 +11,7 @@ resource "random_password" "password2" {
 }
 
 resource "random_string" "random" {
-  length           = 16
+  length           = 20
   special          = true
   override_special = "/@£$"
 }
