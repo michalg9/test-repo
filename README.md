@@ -1,3 +1,3 @@
 # test-repo
 
-test change for dependencies test 24
+test change for dependencies test 25
