@@ -1,3 +1,3 @@
 # test-repo
 
-push for flags
+test commit
