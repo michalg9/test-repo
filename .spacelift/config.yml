@@ -1,0 +1,9 @@
+version: "2"
+
+stack_defaults:
+
+stacks:
+  firststack:
+    environment:
+      RUNTIME_CONFIG_ENV1: "does-it-work?"
+      RUNTIME_CONFIG_ENV2: "i-think-it-is"
